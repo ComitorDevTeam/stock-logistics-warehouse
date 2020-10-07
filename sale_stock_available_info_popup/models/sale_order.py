@@ -12,7 +12,7 @@ class SaleOrderLine(models.Model):
     immediately_usable_qty_today = fields.Float(
         compute='_compute_immediately_usable_qty_today')
 
-    @api.depends('product_id', 'product_uom_qty')
+    @api.depends('product_id', 'product_uom_qty', 'sequence')
     def _compute_immediately_usable_qty_today(self):
         qty_processed_per_product = defaultdict(lambda: 0)
         remaining = self.env['sale.order.line']

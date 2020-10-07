@@ -86,21 +86,24 @@ class SaleStockAvailableInfoPopup(SavepointCase):
                     'product_id': self.product.id,
                     'product_uom_qty': 5,
                     'product_uom': self.product.uom_id.id,
-                    'price_unit': self.product.list_price
+                    'price_unit': self.product.list_price,
+                    'sequence': 10,
                 }),
                 (0, 0, {
                     'name': self.product.name,
                     'product_id': self.product.id,
                     'product_uom_qty': 5,
                     'product_uom': self.product.uom_id.id,
-                    'price_unit': self.product.list_price
+                    'price_unit': self.product.list_price,
+                    'sequence': 20,
                 }),
                 (0, 0, {
                     'name': self.product.name,
                     'product_id': self.product.id,
                     'product_uom_qty': 5,
                     'product_uom': self.product.uom_id.id,
-                    'price_unit': self.product.list_price
+                    'price_unit': self.product.list_price,
+                    'sequence': 30,
                 }),
             ],
         })
